@@ -9,7 +9,7 @@ var timerOff = true
 
 letItRun.addEventListener('click',function(){
   if(timerOff) {
-    timerID =window.setInterval(updateTime, 1000);
+    timerID =window.setInterval(updateTime, 100);
     console.log("hi")
     timerOff = false;
   }
@@ -30,7 +30,7 @@ pauseIt.addEventListener('click',function(){
 });
 
 function updateTime(){
-  seconds +=1
-  title.innerHTML = ("Time Elapsed " + seconds);
+  seconds +=0.1000
+  title.innerHTML = ("Time Elapsed " + seconds.toPrecision(2));
 }
 
